@@ -1,0 +1,127 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 14px;
+  --primary-fg-color: #d7e2e9;
+  --primary-bg-color: #142e44;
+  color: var(--primary-fg-color);
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--primary-bg-color);
+  padding: 0px 10px 5px 10px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.chat-room-container {
+  margin: 0 auto;
+  margin-top: 58px;
+}
+
+.chat-room-container .home-button {
+  border: none;
+  background: none;
+  color: var(--primary-fg-color);
+  font-size: 1.1rem;
+  margin-right: 10px;
+  padding: 0 10px 0 10px;
+}
+
+.chat-room-container .message-container {
+  display: flex;
+}
+
+.chat-room-container .mine {
+  justify-content: flex-end;
+}
+
+.chat-room-container h3 {
+  background: #132738;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 14px 0;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.chat-room-container .message-container div {
+  max-width: 75%;
+  min-width: 150px;
+  padding: 5px 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+.chat-room-container .mine div {
+  text-align: right;
+  background-color: #547794;
+}
+
+.chat-room-container .received div {
+  background-color: #273f53;
+}
+
+.messages-container {
+  margin-bottom: 15px;
+  overflow: scroll;
+  height: calc(100vh - 114px);
+}
+
+.messages-container .message-username {
+  display: block;
+  font-weight: bold;
+}
+
+.send-container {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  border-top: 1px solid rgba(84, 119, 148, 0.5);
+}
+
+.send-container textarea {
+  width: 100%;
+  height: 53px;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--primary-fg-color);
+  padding: 8px 13px;
+  outline: none;
+}
+
+.send-container button {
+  background: none;
+  border: none;
+  width: 48px;
+}
+
+.send-container button img {
+  height: 23px;
+  filter: invert(100%);
+  opacity: 0.6;
+  margin-right: 10px;
+}
+
+.send-container button:disabled img {
+  opacity: 0.4;
+}
